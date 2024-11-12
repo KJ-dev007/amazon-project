@@ -77,11 +77,20 @@ if(matchingItem){
     productId: productId,
     quantity: 1
   });
-}
+};
+
+let cartQuantity = 0;
 
 
-console.log(cart);
+cart.forEach((item) => {
+cartQuantity += item.quantity || 0;
+
+
+});
+document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 });
 });
+
+
 
 
