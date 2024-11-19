@@ -26,7 +26,8 @@ productsHTML += `
         <div class="product-rating-count link-primary">${product.rating.score}</div>
       </div>
 
-      <div class="product-price">$${formatCurrency(matchingProduct.priceCents)}</div>
+      <div class="product-price">$${formatCurrency(product.priceCents)}</div>
+
 
       <div class="product-quantity-container">
         <select>
@@ -64,7 +65,7 @@ function updateCartQuantty(){
 
 
   cart.forEach((cartItem) => {
-  cartQuantity += CartItem.quantity || 0;
+  cartQuantity += cartItem.quantity || 0;
   
   
   });
